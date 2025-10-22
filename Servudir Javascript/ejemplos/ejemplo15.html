@@ -1,0 +1,21 @@
+<script>
+
+    function Usuario(nombre,apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.Hola=function(){
+            console.log("Hola");
+        }
+    }
+
+    let oUsuario= new Usuario('Jorge','Moreno');
+    Usuario.prototype.saludar=function(){
+        console.log("Hola " + this.nombre);
+    }
+
+    oUsuario.Hola();
+
+    oUsuario.saludar();
+
+
+</script>

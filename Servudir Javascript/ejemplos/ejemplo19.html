@@ -1,0 +1,17 @@
+<script>
+
+    let usuario = {
+  nombre: "David",
+  edad: 25,
+  permisos: ["administrador", "editor"]
+};
+
+// convertir objeto a cadena JSON
+let cadenaJson = JSON.stringify(usuario); // String
+console.log(cadenaJson);
+
+// convertir cadena JSON de vuelta a objeto
+let usuarioRecuperado = JSON.parse(cadenaJson); // Objeto
+console.log(usuarioRecuperado);
+
+</script>

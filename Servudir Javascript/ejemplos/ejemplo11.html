@@ -1,0 +1,40 @@
+<script>
+    // Objeto con una propiedad y un método
+    let usuario = {
+        nombre: "David",
+        saluda: function() {
+            return this.nombre;
+        }
+    };
+
+    console.log(usuario.saluda());
+
+    // Llamada al método dentro del objeto
+    usuario.saluda(); // "David"
+
+    // Asignamos el método a una variable
+    let intentaSaludar = usuario.saluda;
+
+    // Llamamos a la función fuera del contexto del objeto
+    // usuario.saluda es una referencia a la función, sin el objeto usuario.
+    intentaSaludar(); // undefined, porque 'this' ya no apunta
+
+// Enlace explícito
+
+    function saluda() {
+    console.log(this.nombre);
+    }
+
+    saluda.call(usuario); // "David"
+// Funciones flecha
+
+    usuario = {
+    nombre: "David",
+    saluda: () => {
+        return this.nombre; // undefined
+    }
+    };
+
+usuario.saluda(); // undefined
+
+</script>

@@ -1,0 +1,12 @@
+<script>
+    const numeros3 = {a:1 , b:2};
+    const numeros4 = {b:3 , c:4};
+
+    Object.assign(numeros3 , numeros4 );
+
+    console.log("numeros3" , numeros3);
+    console.log("numeros4" , numeros4);
+
+    let numeroFinal=Object.assign({},numeros3,numeros4);
+    console.log("numeroFinal", numeroFinal);
+</script>

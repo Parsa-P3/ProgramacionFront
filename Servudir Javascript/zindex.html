@@ -1,0 +1,43 @@
+<script>
+
+    const personas = [
+        {
+            nombre: "Ana",
+            edad: 28,
+            ciudad: "Madrid"
+        },
+        {
+            nombre: "Luis",
+            edad: 34,
+            ciudad: "Buenos Aires"
+        },
+        {
+            nombre: "Sofia",
+            edad: 22,
+            ciudad: "Ciudad de Mexico"
+        }
+    ]
+
+    function ejemplo() {
+        for (const persona of personas){
+            console.log(`${persona.nombre} tiene ${persona.edad} años y vive en ${persona.ciudad}`);
+            
+        }
+    }
+    ejemplo();
+
+    function ejemploAvisos() {
+        //mesaje
+        alert('vamos chic@s que es viernes');
+        
+        let salida = prompt('Seguramente sea toro juego, ¿cual?');
+        alert(salida);
+
+        let bsalida = confirm('Lo que vas a hacer es ciudad de tus hijos');
+
+        if(bSalida == false){
+            bsalida = confirm('Lo que vas a hacer es cuidadr de tus hijos');
+        }
+    }
+    ejemploAvisos()
+</script>

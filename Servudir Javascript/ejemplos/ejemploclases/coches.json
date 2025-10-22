@@ -1,0 +1,5 @@
+[
+    {"marca": "Seat" , "modelo":"Ibiza" , "anyo":"2016" , "electrico":false},
+    {"marca": "BMW" , "modelo":"M3" , "anyo":"2024"  , "electrico":false},
+    {"marca": "Nissan" , "modelo":"Qashqai" , "anyo":"2023" ,"autonomia":600000 , "electrico":true}
+]

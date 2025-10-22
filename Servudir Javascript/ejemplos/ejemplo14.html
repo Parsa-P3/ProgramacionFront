@@ -1,0 +1,47 @@
+<script>
+    //vamos a hacer un objeto que tenga un metodo que me pinte cada 5 segundos por 
+    //consola el nombre del pais
+
+    let paises=[ 
+
+        {nombre:"Spain" , intervalo:5000 ,
+                pintar:function(){
+                    setInterval(function(){
+                        console.log(this.nombre);
+                    }.bind(this), 5000);
+                return true;
+            }
+        }
+        ,
+        {nombre:"USA" , intervalo:5000 ,
+                pintar:function(){
+                    setInterval(function(){
+                        console.log(this.nombre);
+                    }.bind(this), 5000);
+                return true;
+            }
+        }
+        ,
+           {nombre:"Turkey" , intervalo:5000 ,
+                pintar:function(){
+                    setInterval(function(){
+                        console.log(this.nombre);
+                    }.bind(this), 5000);
+                return true;
+            }
+        }
+        ,
+           {nombre:"Serbia" , intervalo:5000 ,
+                pintar:function(){
+                    setInterval(function(){
+                        console.log(this.nombre);
+                    }.bind(this), 5000);
+                return true;
+            }
+        }
+]
+
+
+paises.forEach(pais => pais.pintar());
+
+</script>

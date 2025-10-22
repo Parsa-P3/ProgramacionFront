@@ -1,0 +1,17 @@
+<script>
+
+class Usuario {
+  constructor(nombre, apellidos) {
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+  }
+
+  saludar() {
+    console.log(`Me llamo ${this.nombre} ${this.apellidos}`);
+  }
+}
+
+let usuario = new Usuario("David", "Pérez");
+usuario.saludar(); // "Me llamo David Pérez"
+
+</script>

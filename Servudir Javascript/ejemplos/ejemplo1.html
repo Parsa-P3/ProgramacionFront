@@ -1,0 +1,16 @@
+<script>
+
+    function confirmar(pregunta, si, no){ 
+    if (confirm(pregunta)) 
+        si();
+     else no(); 
+    } 
+    
+    
+    confirmar("¿Sabes qué es un callback?" , 
+    function() {
+         console.log("Has respondido que sí" ); }, 
+    function() { 
+        console.log("Has respondido que no" ); } );
+
+</script>

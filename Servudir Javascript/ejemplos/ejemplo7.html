@@ -1,0 +1,20 @@
+<script>
+    let coche = { color: "rojo", marca: "seat", arrancar: 
+    function() { 
+        console.log("Arrancando");
+        console.log(coche.color); // rojo
+        console.log(coche.marca); // seat
+        } 
+    }; 
+         
+        coche.arrancar(); // Arrancando
+
+        coche.modelo = "ibiza"; 
+        coche["combustible"] = "diesel";
+        for (let prop in coche){
+             console.log(prop); 
+             console.log("valor: " , coche[prop])} 
+
+</script>
+
+// ?

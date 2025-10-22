@@ -1,0 +1,14 @@
+<script>
+// para accede a datos de nuestro archivo json
+fetch('/paises')
+    // cuando el servidor responde , contiene los datos en bruto (convierte a un array de paises)
+  .then(res => res.json())
+    // aqui ya tenemos los datos del JSON listo para usar
+  .then(res => {
+    for (const pais of res) {
+      const tamano = pais.habitantes > 10000000 ? 'país grande' : 'país pequeño';
+      console.log(`${pais.nombre} - ${tamano} - Superficie: ${pais.superficie}`);
+    }
+  });
+
+</script>

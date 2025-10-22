@@ -1,0 +1,13 @@
+<script>
+    let usuario = {
+    nombre: "David",
+    saludaConRetardo: function() {
+        setTimeout(function() {
+            console.log(this.nombre);
+        }.bind(this), 1000);
+    }
+};
+
+usuario.saludaConRetardo(); // "David"
+
+</script>

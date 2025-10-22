@@ -1,0 +1,13 @@
+<script>
+    let colores1 = ["azul", "rojo", "verde"]; 
+    let colores2 = colores1; // NO ES UNA COPIA ES UN ACCESO DIRECTO
+    let colores3 = [...colores1];  // COPIANUEVA 
+    let colores4 = ["cian", ...colores1, "rosa"]; 
+    colores2[0] = "amarillo";
+    console.log(colores1[0]); // amarillo 
+    console.log(colores2[0]);  // amarillo 
+    console.log(colores3[0]); // azul 
+    console.log(colores4.length); // 5
+    console.log(colores4); // [ 'cian', 'azul', 'rojo', 'verde', 'rosa' ]
+
+</script>

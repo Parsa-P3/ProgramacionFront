@@ -1,0 +1,17 @@
+<script>
+
+let persona = { 
+    saludar: function() { 
+    console.log("Hola"); 
+},
+    saludar2: function() { 
+        console.log("Holo"); 
+    }
+
+}; 
+let usuario = Object.create(persona); 
+
+usuario.saludar(); // "Hola"
+usuario.saludar2(); // Holo
+
+</script>
