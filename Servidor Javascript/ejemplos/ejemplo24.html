@@ -1,0 +1,12 @@
+<script>
+    try {
+  // Acceso a una propiedad de una variable que no existe
+  console.log(hola.noexiste);
+} catch (error) {
+  // El parámetro puede tener cualquier nombre, no tiene por qué ser 'error'
+  console.log(error.name);     // ReferenceError
+  console.log(error.message);  // hola is not defined
+}
+
+
+</script>
