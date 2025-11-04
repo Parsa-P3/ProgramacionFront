@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="./funciones.js" ></script>
+</head>
+<body>
+    <form id="frm" name="frm" action="" method="post">
+        <div id="principal">
+            <div id="modificar">
+                <div>Tarea<input type="text" value=""
+                        id="tarea" name="tarea"/></div>
+                <div>Estado
+                    <select id="estado" name="estado" >
+                        <option value=""></option>
+                        <option value="pendiente">pendiente
+                        </option>
+                        <option value="en progreso">en
+                            progreso</option>
+                        <option value="completada">completada
+                        </option>
+                    </select>
+                </div>
+                <div>Id<input type="text" value=""
+                        id="id" name="id"/></div>
+                <div>
+                    <input type="button" id="btnAnadir" onclick="anadir();" value="ADD" />
+                    <input type="button" id="btnAnadir"
+                        onclick="modificar();"
+                        value="MOD" />
+                    <input type="button" id="btnAnadir"
+                        onclick="eliminar();"
+                        value="DEL" />
+                </div>
+            </div>
+            <div id="listado">
+
+            </div>
+        </div>
+    </form>
+  
+</body>
+</html>

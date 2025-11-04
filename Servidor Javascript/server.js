@@ -64,3 +64,27 @@ app.get('/sesion2/ejerciciobucle', (req, res) => {
 app.get('/ejemplos/ejemplo1',(req,res) =>{
   res.sendFile(path.join(__dirname, 'ejemplos','ejemplo1.html'));
 })
+
+app.use('/ejemplos2', express.static(path.join(__dirname, 'ejemplos2')));
+
+app.get('/ejemplos2',(req,res) =>{
+  res.sendFile(path.join(__dirname, 'ejemplos2','main.html'));
+})
+
+app.use('/ejs/ejemploStarwars', express.static(path.join(__dirname, '/ejs/ejemploStarwars')));
+app.use('/ejs', express.static(path.join(__dirname, '/ejs')));
+
+app.get('/ejs/ejemploStarwars',(req,res) =>{
+  res.sendFile(path.join(__dirname, 'ejs/ejemploStarwars','index.html'));
+})
+
+
+
+app.use('/ejs/ejermploTareasS2', express.static(path.join(__dirname, '/ejs/ejermploTareasS2')));
+app.use('/ejs', express.static(path.join(__dirname, '/ejs')));
+
+app.get('/ejs/ejermploTareasS2',(req,res) =>{
+  res.sendFile(path.join(__dirname, 'ejs/ejermploTareasS2','index.html'));
+})
+
+
