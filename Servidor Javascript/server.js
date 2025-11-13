@@ -87,4 +87,10 @@ app.get('/ejs/ejermploTareasS2',(req,res) =>{
   res.sendFile(path.join(__dirname, 'ejs/ejermploTareasS2','index.html'));
 })
 
+app.use('/Rubrica', express.static(path.join(__dirname, '/Rubrica')));
+
+app.get('/Rubrica',(req,res) =>{
+  res.sendFile(path.join(__dirname, 'Rubrica','index.php'));
+})
+
 

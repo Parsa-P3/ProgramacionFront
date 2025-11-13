@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<div id="contenedor" style="border: 2px solid #c0c0c0;">
+  <button data-id="1">Botón 1</button>
+  <button data-id="2">Botón 2</button>
+  <p data-id="3" style="height: 50px; background-color: #c0c0c0;">Pepino Marino</p>
+</div>
+
+<script>
+  document.getElementById('contenedor').addEventListener('click', function(event) {
+    console.log("event.target.tagName",event.target.tagName);
+    if (event.target.tagName === 'BUTTON') {
+      alert(`Botón con ID: ${event.target.dataset.id}`);
+    }
+  });
+  
+</script>
+
+<a href="https://google.es" onclick="accion(event)">Ir a Google</a>
+
+<script>
+  function accion(event) {
+    event.preventDefault();
+    console.log("No se irá a Google");
+  }
+</script>
+
+
+<button id="editar">Editar Persona</button>
+
+<script>
+  let editarPersona = {
+    handleEvent: function(evento) {
+      alert(`Editando a ${this.datosPersona.nombre}`);
+    },
+    datosPersona: {
+      nombre: "Ana",
+      apellido: "López"
+    }
+  };
+
+  let botonEditar = document.getElementById("editar");
+  botonEditar.addEventListener("click", editarPersona);
+</script>
+
+
+
+</body>
+
+</html>

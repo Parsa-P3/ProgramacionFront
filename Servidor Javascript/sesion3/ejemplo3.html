@@ -1,0 +1,68 @@
+<form name="datospersonales">
+    <input name="nombre" type="text" value="José">
+    <input name="apellido" type="text" value="Pérez">
+</form>
+
+<form name="datoslaborales">
+    <input name="profesion" type="text" value="desarrollador web">
+    <div class="detalles">
+        <input name="cargo" type="text" value="programador junior">
+    </div>
+</form>
+<script>
+    let formatosPersonales = document.forms.datospersonales;
+    let formatosLaborales = document.forms.datoslaborales;
+
+    let nombre = formatosPersonales.elements.nombre.value;      // "José"
+    let apellidos = formatosPersonales.elements.apellido.value; // "Pérez"
+    let profesion = formatosLaborales.elements.profesion.value; // "desarrollador web"
+    let cargo = formatosLaborales.elements.cargo.value;         // "programador junior"
+
+</script>
+
+
+<form name="encuesta">
+    <div>
+        Indica tu edad:
+        <input name="edad" type="radio" value="menor20">
+        <input name="edad" type="radio" value="mayor20" checked>
+    </div>
+
+    <div>
+        Selecciona tus opciones de suscripción:
+        <input name="suscripcion" type="checkbox" value="javascript" checked>
+        <input name="suscripcion" type="checkbox" value="java">
+        <input name="suscripcion" type="checkbox" value="go" checked>
+    </div>
+</form>
+<script>
+    let formEncuesta = document.forms.encuesta;
+    let elemsEdad = formEncuesta.elements.edad;
+
+    console.log(elemsEdad[0].checked); // false
+    console.log(elemsEdad[1].checked); // true
+
+    // Cambiamos la selección
+    elemsEdad[0].checked = true;
+
+    // Obtenemos el valor del radio seleccionado
+    console.log(elemsEdad.value); // "menor20"
+
+</script>
+
+<select id="lenguaje">
+    <option value="javascript">JavaScript</option>
+    <option value="java">Java</option>
+    <option value="go">Go</option>
+</select>
+
+<script>
+    let lenguajeSelect = document.getElementById("lenguaje");
+
+    // Selecciona la tercera opción (índice 2)
+    lenguajeSelect.options[2].selected = true;
+
+    // Muestra el valor seleccionado
+    console.log(lenguajeSelect.value); // "go"
+
+</script>
