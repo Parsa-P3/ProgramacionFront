@@ -1,0 +1,117 @@
+/* Estilos Globales */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
+/* Contenedor Principal de la página de Gryffindor */
+#divGryffindore {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo para el contenedor de las tarjetas de personajes */
+#contenedor {
+    display: flex; /* Para organizar las tarjetas en una fila o varias */
+    flex-wrap: wrap; /* Permite que las tarjetas salten a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-top: 30px;
+}
+
+/* Estilo Base para todas las Tarjetas */
+.card {
+    width: 18rem; /* Ancho de la tarjeta como en tu JS */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que la imagen no se salga del borde redondeado */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Pequeño efecto al pasar el mouse */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- Estilos Específicos por Casa (Necesitarás una clase adicional en el HTML/JS para usarlos) --- */
+
+/* Estilos de la Casa Gryffindor */
+/* En tu JS, si agregas <div class="card gryffindor-card" ... */
+.gryffindor-card {
+    border-top: 5px solid #740001; /* Rojo */
+    background-color: #f7e6e6;
+}
+.gryffindor-card .card-title {
+    color: #740001; /* Rojo Oscuro */
+}
+.gryffindor-card .card-body {
+    border-bottom: 3px solid #EEBA30; /* Dorado */
+}
+
+/* Estilos de la Casa Slytherin */
+/* Para usarlo, deberías tener un <div> con la clase "slytherin-card" */
+.slytherin-card {
+    border-top: 5px solid #1A472A; /* Verde Oscuro */
+    background-color: #e6f7e6;
+}
+.slytherin-card .card-title {
+    color: #1A472A;
+}
+.slytherin-card .card-body {
+    border-bottom: 3px solid #AAAAAA; /* Plateado */
+}
+
+/* Estilos de la Casa Hufflepuff */
+/* Para usarlo, deberías tener un <div> con la clase "hufflepuff-card" */
+.hufflepuff-card {
+    border-top: 5px solid #FFD800; /* Amarillo */
+    background-color: #fffde6;
+}
+.hufflepuff-card .card-title {
+    color: #000000; /* Negro para contraste */
+}
+.hufflepuff-card .card-body {
+    border-bottom: 3px solid #606060; /* Negro/Gris */
+}
+
+/* Estilos de la Casa Ravenclaw */
+/* Para usarlo, deberías tener un <div> con la clase "ravenclaw-card" */
+.ravenclaw-card {
+    border-top: 5px solid #0E1A40; /* Azul */
+    background-color: #e6e9f7;
+}
+.ravenclaw-card .card-title {
+    color: #0E1A40;
+}
+.ravenclaw-card .card-body {
+    border-bottom: 3px solid #946800; /* Bronce */
+}

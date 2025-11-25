@@ -1,0 +1,213 @@
+/* Estilos globales y reseteo básico */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ffc300;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffc300;
+    display: inline-block;
+}
+
+/* --- Contenedor Principal (Grid) --- */
+#DragonBallGrid {
+    display: grid;
+    
+    /* 🔑 CAMBIO CLAVE: Fija 4 columnas de igual ancho (1fr) */
+    grid-template-columns: repeat(4, 1fr);
+    
+    /* 🔑 OPCIONAL: Si quieres FORZAR EXACTAMENTE 5 filas de una altura específica. */
+    /* Ten en cuenta que solo se usarán si hay suficientes elementos (20) */
+    /* grid-template-rows: repeat(5, 350px); */ 
+    
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Estilo de la Tarjeta Individual --- */
+.tarjeta {
+    background-color: #2c2c54;
+    border: 1px solid #ffc300;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 195, 0, 0.5);
+}
+
+/* --- Imagen del Personaje --- */
+.imagen {
+    height: 300px;
+    overflow: hidden;
+    border-bottom: 5px solid #ffc300;
+}
+
+.imagen img {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    
+}
+
+.tarjeta:hover .imagen img {
+    transform: scale(1.05);
+}
+
+/* --- Título del Personaje --- */
+.titulo {
+    padding: 15px 10px;
+}
+
+.titulo a {
+    color: #ffc300;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.titulo a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Adaptación para pantallas más pequeñas --- */
+@media (max-width: 900px) {
+    /* En pantallas medianas, podrías reducir a 2 o 3 columnas */
+    #DragonBallGrid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 600px) {
+    /* En móviles, vuelve a una sola columna */
+    #DragonBallGrid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* --- Estilos para la página de detalle del personaje (personaje.html) --- */
+
+#detalle-personaje {
+    /* Estilo del contenedor principal para centrar y destacar */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 40px; 
+    margin: 50px auto; 
+    max-width: 800px; 
+    background-color: #2c2c54; 
+    border: 5px solid #ffc300; 
+    border-radius: 12px; 
+    box-shadow: 0 0 30px rgba(255, 195, 0, 0.7);
+}
+
+#detalle-personaje h1 {
+    /* Estilo del nombre del personaje */
+    color: #fff;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #ffc300;
+    /* Remover el border-bottom global de h1 para esta página */
+    border-bottom: none; 
+    padding: 0;
+}
+
+#detalle-personaje img {
+    /* Estilo de la imagen del personaje grande */
+    width: 100%; 
+    max-height: 70vh; 
+    object-fit: contain; 
+    border: 5px solid #ffc300; 
+    border-radius: 8px; 
+    margin-bottom: 30px;
+}
+
+#detalle-personaje .info-details {
+    /* Contenedor para la información de texto */
+    font-size: 1.4em; 
+    text-align: left; 
+    width: 100%; 
+    line-height: 1.6;
+}
+
+#detalle-personaje .info-details p {
+    margin: 5px 0;
+}
+/* --- Estilos para la Cabecera (Menú de Navegación) --- */
+.main-header {
+    background-color: #000000; /* Fondo negro */
+    padding: 15px 0;
+    margin-bottom: 30px; /* Separación del contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.main-header nav a {
+    color: #ffc300; /* Color dorado */
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.main-header nav a:hover {
+    background-color: #ffc300;
+    color: #1a1a2e; /* Color oscuro al pasar el mouse */
+}
+
+/* --- Estilos para la Tabla de Datos (tabla.html) --- */
+.table-container {
+    max-width: 95%;
+    margin: 20px auto;
+    overflow-x: auto; /* Permite desplazamiento horizontal en móviles */
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes de tabla unidos */
+    background-color: #2c2c54;
+    color: #f0f0f0;
+    font-size: 0.9em;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ffc300;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #ffc300;
+    color: #1a1a2e;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #3b3b6b; /* Fila par con color ligeramente distinto */
+}
