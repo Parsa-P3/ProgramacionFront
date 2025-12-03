@@ -1,0 +1,8 @@
+Ejercicio sencillo
+Usando promesas vamos a llamar a la libreria de harry potter y la de dragon ball 
+
+ -- Vamos a pintar nuestro codigo de pintado con una promesa es decir dentro del then para dragon ball
+ -- lo mismo para harry potter
+
+Lo mismo con un promises all , es decir una dentro de otra
+y luego echamos una carrera a ver cual tarda menos

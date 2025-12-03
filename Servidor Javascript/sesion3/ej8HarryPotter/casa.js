@@ -8,7 +8,7 @@ const formatDate = (dateString) => {
     return dateString; 
 }
 
-
+// Esperar a que el DOM esté completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Obtener los parámetros de la URL
     const params = new URLSearchParams(window.location.search);
